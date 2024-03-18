@@ -1,0 +1,9 @@
+.custombutton{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--button-bg-color);
+    color: var(--color-primary);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
