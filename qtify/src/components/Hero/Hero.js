@@ -5,14 +5,16 @@ const Hero = () =>{
     return(
         <>
 
-        <div className={styles.heroSection}>
-        
-            <h1>100 Thousands Songs, ad-free <br/> Over thousands podcast episodes</h1>
+        <section className={styles.heroSection}>
+        <div className={styles.HeroTitle}>
+            <h1>100 Thousands Songs, ad-free </h1>
+            <h1>Over thousands podcast episodes</h1>
            
-        
-        <img src={hero}/>
-        
         </div>
+
+        <img className={styles.HeroImg} src={hero} alt="headphone"/>
+        
+        </section>
         </>
     )
 }
