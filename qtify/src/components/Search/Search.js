@@ -34,7 +34,7 @@ const Search = ()=>{
                 <InputAdornment position='end'>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Divider orientation="vertical" sx={{ height: '4.2ch', m:3,backgroundColor:'black' }} />
-                            <img src={search} alt="Search Icon" />
+                            <img  src={search} alt="Search Icon" />
                         </div>
                     </InputAdornment>
             ),
