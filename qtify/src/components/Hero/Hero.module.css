@@ -1,8 +1,19 @@
 .heroSection{
-    background-color: var(--button-bg-color);
+    background-color: var(--color-bg-hero);
     width: 100%;
+    color: var(--color-headphone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .heroSection img {
     max-width: 100%;
-    height: auto;
+    height: 15rem;
+    
+
   }
+
+  .heroSection h1{
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+
+     }
