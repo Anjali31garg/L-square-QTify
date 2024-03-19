@@ -4,6 +4,7 @@ import hero from '../../assests/hero.png';
 const Hero = () =>{
     return(
         <>
+        
         <div className={styles.heroSection}>
         <img src={hero}/>
         </div>
