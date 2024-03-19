@@ -5,7 +5,7 @@ const Hero = () =>{
     return(
         <>
 
-        <section className={styles.heroSection}>
+        <section className={styles.Hero}>
         <div className={styles.HeroTitle}>
             <h1>100 Thousands Songs, ad-free </h1>
             <h1>Over thousands podcast episodes</h1>

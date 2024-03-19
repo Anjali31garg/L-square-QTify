@@ -1,19 +1,29 @@
-.heroSection{
-    background-color: var(--color-bg-hero);
-    width: 100%;
-    color: var(--color-headphone);
+.Hero{
+    height: 270px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-hero);
+    color: var(--color-headphone);
 }
-.heroSection img {
-    max-width: 100%;
-    height: 15rem;
-    
 
-  }
+.HeroTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 48px;
+    font-weight: 600;
+    margin: 20px;
 
-  .heroSection h1{
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
 
-     }
+.HeroTitle > h1{
+    height: 48px;
+    font-size: 32px;
+}
+
+.HeroImg{
+    height: 212px;
+    width: 212px;
+}
