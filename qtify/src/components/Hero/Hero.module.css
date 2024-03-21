@@ -1,5 +1,5 @@
 .heroSection{
-    background-color: var(--color-bg-hero);
+    /* background-color: var(--color-bg-hero); */
     width: 100%;
     color: var(--color-headphone);
     display: flex;
