@@ -3,10 +3,11 @@ import axios from "axios";
 import Card from "../Card/Card";
 import styles from "./Album.module.css";
 import Button from '@mui/material/Button';
-
+import Carousel from "../Carousel/Carousel";
 
 const AlbumContain = ({apiurl, title}) =>{
 const[topAlbum, setTopAlbum] = useState([]);
+const[showCarousel, setShowCarousel] = useState(false);
 console.log("fetching data of", title);
 
 const performApi = async(url) =>{
@@ -23,23 +24,32 @@ useEffect(()=>{
     performApi(apiurl);
 },[]);
 
+const toggleMe = ()=>{
+    setShowCarousel(!showCarousel);
+}
 
 return(
     <>
      <div style={{ marginBottom: '16px', display: 'flex', justifyContent: 'space-between', color:'#FFFFFF' }}>
         <h2>{title}</h2>
-        <Button variant="text" className={styles.albumbtn} sx={{color: 'green'}}>Collapse</Button>
+        <Button variant="text" className={styles.albumbtn} sx={{color: 'green'}} onClick={toggleMe}>
+            
+            {showCarousel ? 'Show All': 'Collapse'}</Button>
       </div>
-     {/* <h1 className="font-Poppins text-white text-3xl mt-5 ml-5">{title}</h1> */}
-     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
-     
-        {topAlbum.length
-          ? topAlbum.map((albumDetails, idx) => (
-              <Card albumDetails={albumDetails} key={albumDetails.id} />
-            ))
-          : null}
-      </div>
-    
+
+      {!showCarousel ? (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+          {topAlbum.length ? topAlbum.map((albumDetails, idx) => (
+            <Card albumDetails={albumDetails} key={albumDetails.id} />
+          )) : null}
+        </div> // Use the Carousel component here
+      ) : (
+      
+         <Carousel 
+         data={topAlbum}
+         renderComponent={(data)=> <Card albumDetails={data}/>}
+         /> // Use the Carousel component here
+      )}
     </>
 )
 }
