@@ -52,7 +52,7 @@ const Carousel = ({data, renderComponent}) =>{
                         spaceBetween: 30
                     },
                     1200: {
-                        slidesPerView: 6,
+                        slidesPerView: 6.5,
                         spaceBetween: 40
                     }
                 }}

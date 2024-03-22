@@ -1,8 +1,13 @@
+:root{
+    --color-white: #FFFFFF;
+}
+
 .rightNav{
     position: absolute;
     right: 10px;
     top: 40%;
     transform: translateY(-50%);
     z-index: 10;
-    color: var(--color-headphone);
+    color: var(--color-white);
+    
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import {Card as MuiCard, CardContent,CardMedia, Typography,Chip, colors} from '@mui/material';
 import styles from "./Card.module.css";
 
-const Card = ({albumDetails}) =>{
+const Card = ({albumDetails, isSong}) =>{
     return (
 
         <>
@@ -17,7 +17,14 @@ const Card = ({albumDetails}) =>{
               
             />
             <CardContent>
+                {isSong ?(
+
+<Chip label={`${albumDetails.likes} Likes`}  className={styles.mychip} sx={{backgroundColor: 'black',color: 'white'}}/>
+               
+                ):(
                 <Chip label={`${albumDetails.follows} Follows`}  className={styles.mychip} sx={{backgroundColor: 'black',color: 'white'}}/>
+                )}
+                
                 {/* <Typography gutterBottom variant="h5" component="div">
 
                     {albumDetails.title}

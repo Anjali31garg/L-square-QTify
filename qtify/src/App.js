@@ -19,6 +19,9 @@ function App() {
 
    <AlbumContain apiurl={API.top_album} title="Top Albums"/>
    <AlbumContain apiurl={API.new_album} title="New Albums" />
+   <AlbumContain apiurl={API.song_album} title="Songs" />
+     
+
     </div>
   );
 }
