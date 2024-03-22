@@ -7,7 +7,7 @@ import Carousel from "../Carousel/Carousel";
 
 const AlbumContain = ({apiurl, title}) =>{
 const[topAlbum, setTopAlbum] = useState([]);
-const[showCarousel, setShowCarousel] = useState(false);
+const[showCarousel, setShowCarousel] = useState(true);
 console.log("fetching data of", title);
 
 const performApi = async(url) =>{
