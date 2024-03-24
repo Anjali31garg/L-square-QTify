@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 import styles from "./Album.module.css";
 import Button from '@mui/material/Button';
 import Carousel from "../Carousel/Carousel";
-import { Tabs, Tab } from "@mui/material";
+import { Tabs, Tab, Tooltip } from "@mui/material";
 
 
 const AlbumContain = ({apiurl, title}) =>{
@@ -87,19 +87,20 @@ const handleTabs = (event,newValue)=>{
         </div> // Use the Carousel component here
       )}
       {showCarousel && title !== 'Songs' && (
-         <Carousel 
+          <Carousel 
          data={topAlbum}
          renderComponent={(data)=> <Card albumDetails={data}/>}
          /> // Use the Carousel component here
-
-
+    
       )}
 
         {title === 'Songs' && (
+           
                 <Carousel
                     data={filteredAlbums}
                     renderComponent={(data) => <Card albumDetails={data} isSong={title === 'Songs'} />}
                 />
+            
             )}
     </>
 )

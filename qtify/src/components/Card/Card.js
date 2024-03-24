@@ -1,12 +1,15 @@
 import React from 'react';
-import {Card as MuiCard, CardContent,CardMedia, Typography,Chip, colors} from '@mui/material';
+import {Card as MuiCard, CardContent,CardMedia, Typography,Chip, colors,Tooltip} from '@mui/material';
 import styles from "./Card.module.css";
 
 const Card = ({albumDetails, isSong}) =>{
+    const numberOfSongs = albumDetails.songs ? albumDetails.songs.length : 0;
     return (
 
         <>
           <div className={styles.cardContainer}>
+          <Tooltip title={`${numberOfSongs} Songs`} placement="top" arrow>
+              
             <MuiCard sx={{maxWidth: 200 , maxHeight:400}}  className={styles.mycard}>
             <CardMedia
                 component="img"
@@ -32,6 +35,7 @@ const Card = ({albumDetails, isSong}) =>{
             </CardContent>
           
             </MuiCard>
+            </Tooltip>
             <Typography gutterBottom variant="h5" component="div" className={styles.text}>
 
 {albumDetails.title}
